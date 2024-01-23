@@ -1,42 +1,115 @@
+/* GLOBAL RESET */
+* { box-sizing: border-box;}
+body { margin: 0;}
+
+/* GLOBAL COLORS */
+body { color: rgba(0, 0, 0, 0.8); }
+a { color: rgba(0, 102, 204, 1); }
+a:hover { color: rgba(0, 51, 153, 1);}
+
+/* GLOBAL TYPOGRAPHY */
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: goldenrod;
-    margin: 0;  
+    font-size: 88.75%;
+    line-height: 1.4;
+}
+
+/* HEADER */
+header {
+    background-color: rgba(0, 102, 204, 1);
+    color: rgba(0,0,0,0.8);
+    padding: 1em;
     display: grid;
-    align-content: center;
-    min-height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
-h1 {
-    font-size: 48px;
-    /* text-transform: uppercase; */
-    text-align: center;
+header a {
+    color: rgba(225, 225, 225, 0.8);
+    text-decoration: none;
 }
 
-h2 {
-    text-align: center;
+header a:hover {
+    color: rgba(225,255,255,1);
 }
 
-h3 {
-    text-align: center;
+/* SITE ID */
+.site-id h1 {
+    margin: 0;
 }
 
-p {
-    color: darkslategrey;
-    max-width: 30em;
-    margin: 0 auto;
-}
-
-ul {
-    margin: 0 auto;
+/* SITE NAV */
+.site-nav ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
     padding: 0;
+    list-style: none;
 }
 
-a {
-    color: purple;
+.site-nav a {
+    display: block;
+    padding: 1em;
 }
 
-/*body * {
-    border: 1px solid green;
-} 
-*/
+/* MAIN */
+main {
+    background: rgba(0,0,0,.05);
+}
+
+/* HERO SECTION */
+.hero {
+    background-color: rgba(0, 102, 204, 1);
+    text-align: center;
+    color: white;
+    padding: 6em 1em;
+}
+
+.hero h2 {
+    font-size: 6em;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.hero p {
+    max-width: 30em;
+    margin: 1em auto;
+}
+
+/* COURSES SECTION */
+.courses {
+    padding: 6em 1em;
+    display: grid;
+    justify-content: center;
+}
+
+.courses ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.courses h3 {
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    border-top: 1px solid rgba(0,0,0,.05);
+    padding: 1em;
+}
+
+/* SOCIAL NAV */
+.social-nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.social-nav a {
+    display: block;
+    padding: 1em;
+}
