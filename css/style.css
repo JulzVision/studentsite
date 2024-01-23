@@ -17,6 +17,10 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    text-align: center;
+}
+
 p {
     color: darkslategrey;
     max-width: 30em;
@@ -32,7 +36,7 @@ a {
     color: purple;
 }
 
-/* body * {
+/*body * {
     border: 1px solid green;
 } 
 */
