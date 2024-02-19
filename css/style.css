@@ -100,6 +100,10 @@ main {
     text-align: center;
 }
 
+.courses img {
+    display: block;
+}
+
 /* COURSE PAGES WITH MULTIPLE PROJECT LISTS */
 .coursework {
     padding: 3em 1em;
