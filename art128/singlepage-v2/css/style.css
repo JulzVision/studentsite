@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+/* TABLE OF CONTENTS
+    #BASE CONTENT
+        #TYPOGRAPHY
+------------*/
+
+/* #TYPOGRAPHY  */
+/* Reference
+	62.5%  => 10px
+	68.8%  => 11px
+	75%    => 12px
+	81.3%  => 13px
+	87.5%  => 14px
+	100%   => 16px
+	112.5% => 18px
+	125%   => 20px
+*/
+
+@font-face {
+    font-family: cambay;
+    font-family: nerko one;
+    src: url("https://fonts.googleapis.com/css2?family=Cambay:ital,wght@0,400;0,700;1,400;1,700&family=Nerko+One&display=swap");
+}
+
+.nerko-one-regular {
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+.cambay-regular {
+    font-family: "Cambay", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .cambay-bold {
+    font-family: "Cambay", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .cambay-regular-italic {
+    font-family: "Cambay", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .cambay-bold-italic {
+    font-family: "Cambay", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }  
+
+  h1 {
+    font-family: nerko one;
+  }
+
+  body {
+    font-family: cambay;
+    color: #333;
+    font-size: 87.5%;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Nerko One, Arial, Helvetica, sans-serif ;
+    margin: 0.5em 0;
+}
+
+h1 {
+    font-size: 3em;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 2.25em;
+    line-height: 1.1;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+
+p {
+    margin: 0 0 0.5em 0;
+    max-width: 38em;
+}
