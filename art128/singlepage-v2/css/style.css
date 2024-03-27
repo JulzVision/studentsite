@@ -2,7 +2,10 @@
 
 /* TABLE OF CONTENTS
     #BASE CONTENT
-        #TYPOGRAPHY
+        #WEBFONTS & TYPOGRAPHY
+        #RESET
+        #HERO
+        #ABOUT
 ------------*/
 
 /* #TYPOGRAPHY  */
@@ -16,6 +19,8 @@
 	112.5% => 18px
 	125%   => 20px
 */
+
+/* WEBFONTS & TYPOGRAPHY */
 
 @font-face {
     font-family: cambay;
@@ -88,7 +93,97 @@ h3 {
     line-height: 1.2;
 }
 
+h4 {
+    font-size: 1.3125em;
+    line-height: 1.3;
+}
+
+h5 {
+    font-size: 1.125em;
+    line-height: 1.4;
+}
+
 p {
-    margin: 0 0 0.5em 0;
+    margin: 0 0 0em 0;
     max-width: 38em;
+}
+
+/* -------- !! TESTING --------- */
+body {
+    background-color: pink;
+}
+* {
+    border: dashed red 1px;
+}
+/* -----------------------------*/
+
+
+/* GLOBAL RESET */
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+}
+
+/* LOGO */
+.logo {
+    max-width: 30em;
+    margin: 1em auto;
+    text-align: center;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 3em 1em;
+}
+
+.hero h1 {
+    font-size: 6em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.hero p {
+    max-width: 30em;
+    margin: 1em auto;
+}
+
+/* ABOUT */
+.about {
+    background-color: burlywood;
+}
+
+.about h2 {
+    text-align: center;
+}
+
+.what, .start {
+    background-color: white ;
+    margin: 0 10em 1.5em 10em;
+    max-width: 40em;
+}
+
+.what {
+    display: flex;
+    direction: ltr;
+}
+
+.what .col-1 {
+    margin: 0 1em 0 0;
+}
+
+.about h3 {
+    margin: 0;
+    text-align: left;
+    background-color: rgba(0, 0, 0, .15);
+}
+
+.about p {
+    background-color: rgba(0, 0, 0, .25);
+    text-align: left;
 }
