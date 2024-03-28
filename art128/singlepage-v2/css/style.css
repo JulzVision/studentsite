@@ -3,7 +3,9 @@
 /* TABLE OF CONTENTS
     #BASE CONTENT
         #WEBFONTS & TYPOGRAPHY
+        #TESTING
         #RESET
+        #LOGO
         #HERO
         #ABOUT
 ------------*/
@@ -58,15 +60,16 @@
     font-style: italic;
   }  
 
-  h1 {
-    font-family: nerko one;
-  }
-
   body {
     font-family: cambay;
     color: #333;
     font-size: 87.5%;
     line-height: 1.5;
+    display: flex;
+    flex-flow: column;
+    margin: 0 0 0 0;
+    background-color: #FBE4B6;
+    padding: 0;
 }
 
 h1,
@@ -109,11 +112,8 @@ p {
 }
 
 /* -------- !! TESTING --------- */
-body {
-    background-color: pink;
-}
 * {
-    border: dashed red 1px;
+    /* border: dashed red 1px; */
 }
 /* -----------------------------*/
 
@@ -122,21 +122,16 @@ body {
 
 * {
     box-sizing: border-box;
-
 }
 
-body {
-    margin: 0;
-}
-
-/* LOGO */
+/* ----------- LOGO ------------*/
 .logo {
     max-width: 30em;
     margin: 1em auto;
     text-align: center;
 }
 
-/* HERO */
+/* -------------HERO -------------*/
 .hero {
     text-align: center;
     padding: 3em 1em;
@@ -149,41 +144,122 @@ body {
 }
 
 .hero p {
-    max-width: 30em;
+    max-width: 35%;
     margin: 1em auto;
+    font-weight: 700;
 }
 
-/* ABOUT */
+/* -------------- ABOUT ------------*/
 .about {
-    background-color: burlywood;
+    background-color: #933E00;
+    padding: 0 0 2em 0;
+    margin: 0;
 }
 
-.about h2 {
+.about .heading {
     text-align: center;
+    padding: 2em 0 2em 0;
+}
+
+.about h2,
+.about h3 {
+    color: #F8E2B7;
 }
 
 .what, .start {
-    background-color: white ;
-    margin: 0 10em 1.5em 10em;
-    max-width: 40em;
-}
-
-.what {
+    /* background-color: white ; */
+    margin: 0 auto 1.5em auto;
+    max-width: 50em;
     display: flex;
     direction: ltr;
+    height: auto;
+}
+
+.start {
+    direction: rtl;
 }
 
 .what .col-1 {
-    margin: 0 1em 0 0;
+    margin: 0 1.5em 0 0;
+}
+
+.start .col-1 {
+    margin: 0 0 0 1.5em
 }
 
 .about h3 {
     margin: 0;
     text-align: left;
-    background-color: rgba(0, 0, 0, .15);
+    padding: 0 0 1em 0;
+    /* background-color: rgba(0, 0, 0, .15); */
 }
 
 .about p {
-    background-color: rgba(0, 0, 0, .25);
+    /* background-color: rgba(0, 0, 0, .25); */
     text-align: left;
+    color: white;
+}
+
+/* -------------- MENU --------------- */
+
+.menu {
+    background-color: #602A02;
+    color: white;
+    margin: 0;
+    text-align: center;
+    /* border: dashed red 1px; */
+
+}
+
+.menu h2,
+.menu h3 {
+    color: #F8E2B7;
+}
+
+.menu-container {
+    /* background-color: darkred; */
+    margin: 1.5em;
+    height: fit-content;
+}
+
+.menu-module{
+    display: flex;
+    flex-direction: row;
+    padding: .5em;
+    /* background-color: beige; */
+    height: auto;
+    border: dashed red 1px;
+    margin: 1em auto 0 auto;
+    max-width: 50em;
+}
+
+.menuitem {
+    text-align: left;
+    background-color: #933E00;
+    border: dashed blue 1px;
+    align-content: end;
+}
+
+.item {
+    background: black;
+}
+
+.item-img {
+    background-color: transparent;
+}
+
+.menuitem.classico {
+    /* display: none; */
+}
+
+.item-img.classico {
+    /* display: none; */
+}
+
+.menuitem.choco {
+    /* display: none; */
+}
+
+.item-img.choco {
+    display: none;
 }
