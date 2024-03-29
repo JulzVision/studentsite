@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+/* TABLE OF CONTENTS
+    #BASE CONTENT
+        #WEBFONTS & TYPOGRAPHY
+        #TESTING
+        #RESET
+        #LOGO
+        #HERO
+        #ABOUT
+------------*/
+
+/* #TYPOGRAPHY  */
+/* Reference
+	62.5%  => 10px
+	68.8%  => 11px
+	75%    => 12px
+	81.3%  => 13px
+	87.5%  => 14px
+	100%   => 16px
+	112.5% => 18px
+	125%   => 20px
+*/
+
+/* WEBFONTS & TYPOGRAPHY */
+
+@font-face {
+    font-family: bryant-web, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-family: ;
+    src: url("https://use.typekit.net/xyk3axk.css");
+}
+
+body {
+    font-family: bryant-web, sans-serif;
+    color: #68C5AE;
+    background-color: #11294C;
+    /* border: solid red 1px; */
+    text-align: center;
+}
+
+h1, p {
+    /* border: dashed white 1px; */
+    margin: 0;
+}
+
+h1 {
+    margin: 5em 0 0 0;
+}
