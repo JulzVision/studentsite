@@ -4,6 +4,7 @@
     #BASE CONTENT
         #WEBFONTS & TYPOGRAPHY
         #TESTING
+        #MEDIA QUERIES
         #RESET
         #LOGO
         #HERO
@@ -117,8 +118,13 @@ p {
 * {
     /* border: dashed red 1px; */
 }
-/* -----------------------------*/
+/* -----------MEDIA QUERIES-------------*/
 
+@media (min-height: 700px){ 
+    .logo-img {
+        height: 100vh;
+    }
+}
 
 /* GLOBAL RESET */
 
