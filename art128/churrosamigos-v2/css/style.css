@@ -28,6 +28,7 @@
 @font-face {
     font-family: cambay;
     font-family: nerko one;
+    font-family: poleno;
     src: url("https://fonts.googleapis.com/css2?family=Cambay:ital,wght@0,400;0,700;1,400;1,700&family=Nerko+One&display=swap");
 }
 
@@ -63,7 +64,6 @@
 
   
 
-h1,
 h2,
 h3,
 h4,
@@ -76,7 +76,8 @@ button {
 h1 {
     font-size: 3em;
     line-height: 1;
-    font-family: rockwell;
+    font-family: poleno;
+    font-weight: 400;
 }
 
 h2 {
@@ -151,7 +152,6 @@ body {
     background-image: linear-gradient(180deg, #933d00a7,
     #fbe4b6), url(../img/herobg.jpg);
     width: 100%;
-    /* position: absolute; */
 }
 
 .logo-img {
@@ -171,9 +171,6 @@ body {
     height: 100%;
     transform-style: preserve-3d;
     z-index: -1;
-    /* background-image: linear-gradient(180deg,
-    #fbe4b6,
-    #933d00c3), url(../img/herobg.jpg); */
 }
 
 .background,
@@ -224,7 +221,7 @@ p.arrow {
 
 /* -------------- ABOUT ------------*/
 .about * {
-    /* border: solid red 1px; */
+    border: solid red 1px;
 }
 
 .palmdivider {
@@ -243,9 +240,11 @@ img.palmdivider {
     position: relative;
     background-color: #933E00;
     /* --sand-- */
-        background-image: url(../img/SVG/sand4.svg);
+        background-image: url(../img/SVG/sand5.svg);
+        background-size: 100%;
         background-repeat: no-repeat;
         background-color: #331600;
+        min-height: 150vh;
 
     /* keep below to close gaps */
     padding: 0 0 0 0;
@@ -270,14 +269,19 @@ img.palmdivider {
 .about p {
     display: flex;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     color: white;
-    max-width: 66%;
+    max-width: 40ch;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
 .about img {
     max-width: 66.6%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .what,.start {
@@ -315,11 +319,17 @@ img.palmdivider {
         transform-style: preserve-3d;
         z-index: -1;
     } */
+
+    .about h3 {
+        text-align: left;
+        justify-content: left;
+    }
     
     .about img {
         max-width: none;
     }
     .what, .start {
+        text-align: left;
         margin: 0 auto 1.5em auto;
         max-width: 50em;
         display: flex;
@@ -389,16 +399,16 @@ img.palmdivider {
 }
 
 .wave {
-    position: relative;
-    top: -40em;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     /* z-index: 0; */
-    transform: translateZ(-10px) scale(2)
-}
-.arrow.menu {
-    background-color:#331600;
+    transform: translateZ(-10px) scale(2);
+    width: 100%;
 }
 
-.arrow.menu p {
+.arrow p {
     color: #933E00;
 }
 
