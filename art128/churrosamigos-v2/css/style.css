@@ -224,7 +224,7 @@ p.arrow {
 
 /* -------------- ABOUT ------------*/
 .about * {
-    border: solid red 1px;
+    /* border: solid red 1px; */
 }
 
 .palmdivider {
@@ -242,8 +242,13 @@ img.palmdivider {
 .about {
     position: relative;
     background-color: #933E00;
+    /* --sand-- */
+        background-image: url(../img/SVG/sand4.svg);
+        background-repeat: no-repeat;
+        background-color: #331600;
+
     /* keep below to close gaps */
-    padding: 0 0 2em 0;
+    padding: 0 0 0 0;
     margin: 0; 
 }
 
@@ -283,6 +288,10 @@ img.palmdivider {
     margin-top: 2em;
 }
 
+.start .col-1 {
+   /* ADD MOBILE */
+}
+
 .start p {
     width: 55%;
 }
@@ -299,6 +308,14 @@ img.palmdivider {
 }
 
 @media (min-width: 768px) {
+    
+    /* NEED TO APPLY PARALLAX TO ABOUT */
+
+    /* .about {
+        transform-style: preserve-3d;
+        z-index: -1;
+    } */
+    
     .about img {
         max-width: none;
     }
@@ -310,12 +327,23 @@ img.palmdivider {
         height: auto;
     }
 
+    /* NEED TO APPLY PARALLAX TO CONTENT*/
+
     .start {
+        /* position: relative; */
+        /* z-index: 0; */
         direction: rtl;
+        margin-top: -6em;
+        /* transform: translateZ(-10px) scale(2); */
     }
+
+    /* .what {
+        transform: translateZ(-5px) scale(1.5);
+    } */
 
     .what .col-1 {
         margin: 0 1.5em 0 0;
+        
     }
 
     .start .col-1 {
@@ -336,6 +364,12 @@ img.palmdivider {
         width: auto;
     }
 
+    .start .col-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
 }
 
 .about h3 {
@@ -349,11 +383,30 @@ img.palmdivider {
     border: solid #fbe4b6 10px;
 }
 
+.about .content {
+    position: relative;
+    z-index: 1;
+}
+
+.wave {
+    position: relative;
+    top: -40em;
+    /* z-index: 0; */
+    transform: translateZ(-10px) scale(2)
+}
+.arrow.menu {
+    background-color:#331600;
+}
+
+.arrow.menu p {
+    color: #933E00;
+}
+
 /* -------------- MENU --------------- */
 
 .menu {
-    background-color: #933E00;
-    background-image: url(../img/menu-bg-small.svg);
+    background-color: #331600;
+    background-image: url(../img/SVG/oceanfloor.svg);
     background-size: 100%;
     background-repeat: no-repeat;
     padding-top: 3em;
@@ -361,7 +414,7 @@ img.palmdivider {
     background-position: center bottom;
     color: white;
     padding: 4em 2em 0 2em;
-    margin-top: -1.25em;
+    /* margin-top: -1.25em; */
     text-align: center;
 
 }
@@ -412,7 +465,8 @@ img.palmdivider {
 
 @media (min-width: 768px) {
     .menu {
-        background-image: url(../img/menu-bg-wide.svg);
+        background-image: url(../img/SVG/oceanfloor.svg);
+    
     }
 
     .menu h3 {
@@ -475,6 +529,8 @@ img.palmdivider {
         padding: 0 2.5em 0 0;
     }
 }
+
+
 /* --------MAP ------- */
 
 /* .map * {
