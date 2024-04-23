@@ -221,14 +221,14 @@ p.arrow {
 
 /* -------------- ABOUT ------------*/
 .about * {
-    border: solid red 1px;
+    /* border: solid red .5px; */
 }
 
 .palmdivider {
     margin: 0;
     padding: 0;
     position: relative;
-    bottom: -20px;
+    bottom: -13px;
 }
 
 img.palmdivider {
@@ -238,18 +238,22 @@ img.palmdivider {
 
 .about {
     position: relative;
-    background-color: #933E00;
+    background-color: #602A02;
     /* --sand-- */
-        background-image: url(../img/SVG/sand5.svg);
+        background-image: url(../img/SVG/sand2-m.svg);
         background-size: 100%;
         background-repeat: no-repeat;
-        background-color: #331600;
-        min-height: 150vh;
-
     /* keep below to close gaps */
     padding: 0 0 0 0;
-    margin: 0; 
+    margin: 0;
+    z-index: 1; 
 }
+
+/* Testing */
+        .about {
+            /* background-color: gray; */
+        }
+
 
 .about .heading {
     text-align: center;
@@ -311,6 +315,53 @@ img.palmdivider {
     padding-bottom: 2em;
 }
 
+
+.about h3 {
+    margin: 0;
+    text-align: left;
+    padding: 0 0 1em 0;
+}
+
+.about-img {
+    border-radius: 30px;
+    border: solid #fbe4b6 10px;
+}
+
+.about .content {
+    position: relative;
+    z-index: 2;
+}
+
+.wave {
+    /* display: none; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    /* transform: translateZ(-10px) scale(2); */
+    transform: scaleY(2);
+    width: 100%;
+    margin-bottom: 2.5em;
+}
+
+.arrow {
+    position: relative;
+    z-index: 1;
+}
+
+.arrow p {
+    color: #F8E2B7;
+    margin-top: 4em;
+}
+
+.arrow img {
+    /* keep margin to close gap; adjust padding */
+    margin-bottom: 1em;
+    padding-bottom: 4em;
+}
+
+/* -- LARGE SCREENS -- */
+
 @media (min-width: 768px) {
     
     /* NEED TO APPLY PARALLAX TO ABOUT */
@@ -320,6 +371,21 @@ img.palmdivider {
         z-index: -1;
     } */
 
+    .about {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-image: url(../img/SVG/sand4.svg);
+        background-color: #602A02;
+    }
+
+    
+
+    /* Testing on larger screens */
+    .about {
+        /* background-color: gray; */
+    }
+    
     .about h3 {
         text-align: left;
         justify-content: left;
@@ -333,7 +399,6 @@ img.palmdivider {
         margin: 0 auto 1.5em auto;
         max-width: 50em;
         display: flex;
-        /* direction: ltr; */
         height: auto;
     }
 
@@ -344,12 +409,8 @@ img.palmdivider {
         /* z-index: 0; */
         direction: rtl;
         margin-top: -6em;
-        /* transform: translateZ(-10px) scale(2); */
+        /* margin-bottom: -6em; */
     }
-
-    /* .what {
-        transform: translateZ(-5px) scale(1.5);
-    } */
 
     .what .col-1 {
         margin: 0 1.5em 0 0;
@@ -379,66 +440,39 @@ img.palmdivider {
         flex-direction: column;
         justify-content: end;
     }
+    .wave {
+        /* position: relative;
+        bottom: 50em; */
+        padding-bottom: 2em;
+    }
 
-}
+    .arrow {
+        margin-top: 1em;
+    }
 
-.about h3 {
-    margin: 0;
-    text-align: left;
-    padding: 0 0 1em 0;
-}
+    .arrow p {
+        /* margin-top: 2em; */
+    }
 
-.about-img {
-    border-radius: 30px;
-    border: solid #fbe4b6 10px;
-}
-
-.about .content {
-    position: relative;
-    z-index: 1;
-}
-
-.wave {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    /* z-index: 0; */
-    transform: translateZ(-10px) scale(2);
-    width: 100%;
-}
-
-.arrow p {
-    color: #933E00;
 }
 
 /* -------------- MENU --------------- */
 
+.menu * {
+    /* border: solid yellow 1px; */
+}
+
 .menu {
     background-color: #331600;
-    background-image: url(../img/SVG/oceanfloor-m.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    padding-top: 3em;
-    padding-bottom: 3em;
-    background-position: center bottom;
     color: white;
-    padding: 4em 2em 0 2em;
-    /* margin-top: -1.25em; */
+    margin-top: -1.25em;
     text-align: center;
-
-}
-
-.menu-container * {
-    /* border: solid red 1px; */
     display: flex;
     flex-direction: column;
-}
+    position: relative;
+    z-index: 2;
 
-.menu-module {
-    align-items: center;
 }
-
 .menu h2,
 .menu h3 {
     color: #F8E2B7;
@@ -446,6 +480,10 @@ img.palmdivider {
 
 .menu h3 {
     margin-bottom: 4em;
+}
+
+.menu-module.choco {
+    /* margin-bottom: 20em; */
 }
 
 .info {
@@ -459,12 +497,30 @@ img.palmdivider {
     text-align: left;
 }
 
+/* --SMALL SCREENS -- */
+
 @media (max-width: 767px) {
+
+    .menu {
+        background-image: url(../img/SVG/oceanfloor-m.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        /* background-position: center bottom; */
+        padding: 4em 2em 0 2em;
+        /* margin-top: -1.25em; */
+        text-align: center;
+    
+    }
     .menuitem .info {
         max-width: 33.3%;
         display: flex;
         flex-direction: column;
     }
+
+    .menu-module {
+        margin-bottom: 10em;
+    }
+
 }
 
 .calprice {
@@ -473,10 +529,37 @@ img.palmdivider {
     justify-content: space-between;
 }
 
+
+
+/* -- TABLET -- */
+
 @media (min-width: 768px) {
     .menu {
+        padding-top: 5em;
         background-image: url(../img/SVG/oceanfloor.svg);
+        background-size: cover;
+    }
+
+    .menuitem .info {
+        max-width: 33.3%;
+        display: flex;
+        flex-direction: column;
+    }
+    .menu-module.choco {
+        margin-bottom: 10em;
+    }
+}
+
+/* -- LARGE SCREENS -- */
+
+@media (min-width: 1080px) {
+    .menu {
+        /* background-image: url(../img/SVG/oceanfloor.svg); */
     
+    }
+
+    .menuitem .info {
+        max-width: none;
     }
 
     .menu h3 {
@@ -495,8 +578,9 @@ img.palmdivider {
         padding: .5em;
         margin: 1em auto 0 auto;
         justify-items: right;
+        align-items: center;
     }
-
+    
 
     .menu-module.classico {
         max-width: 30em;
