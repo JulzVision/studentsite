@@ -219,6 +219,10 @@ p.arrow {
     color: #42210B;
 }
 
+.arrow p {
+    padding-bottom: .5em;
+}
+
 /* -------------- ABOUT ------------*/
 .about * {
     /* border: solid red .5px; */
@@ -518,7 +522,7 @@ img.palmdivider {
     }
 
     .menu-module {
-        margin-bottom: 10em;
+        margin-bottom: 5em;
     }
 
 }
@@ -627,73 +631,134 @@ img.palmdivider {
 
 /* --------MAP ------- */
 
-/* .map * {
-    border: solid red;
-} */
+/* -- TESTING -- */
+.map * {
+    /* border: solid red; */
+}
+
+.map {
+    background-image: url(../img/fissuretop-m.svg);
+    background-color: #331600;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 1em;
+    position: relative;
+    margin-left: -5em;
+    display: flex;
+    flex-direction: column;
+}
 
 .map h2 {
-    color: #933E00;
+    color: #F8E2B7;
     text-align: center;
-    margin: 1.5em;
+    /* margin: 1.5em; */
+    /* padding-top: 1.5em; */
     margin-bottom: 2em;
+    margin-top: 4em;
 }
 
 .map-container {
-    background-color: rgba(220, 173, 50, .4);
-    padding: 2em 4em;
-    border-radius: 20px;
     display: flex;
-    width: fit-content;
-    margin: 0 auto 2em auto;
+    flex-direction: column;
     position: relative;
-}
-.map-container::after {
-    background-color: rgba(220, 173, 50, .4);
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    z-index: -1;
-    
-}    
-
-.map-container .col-1 {
-    margin: -4em 1.5em 0 0;
 }
 
 .map-container .col-2 {
-    margin-top: -1em;
-}
-
-.location {
-    color: #933E00;
-}
-
-.location.details {
-    color: #42210B;
-}
-
-.order {
-    margin-top: .5em;
-    padding: .5em 1em .65em 1em;
-    border-radius: 5px;
-}
-
-button.order{
-    background-color: #933E00;
     color: #F8E2B7;
-    border: none;
+    text-align: left;
+    margin-bottom: 1em;
 }
 
+.address {
+    width: 12em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.address h4 {
+    padding-top: 1em;
+}
+
+.hours {
+    width: 12em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    display: none;
+}
+
+@media (min-width: 768px) {
+
+    .map {
+        background-image: url(../img/fissuretop.svg);
+    }
+    .map-container {
+        padding: 2em 4em;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        margin: 0 auto 2em auto;
+        position: relative;
+    }
+
+    /* Old style */
+        /* .map-container::after {
+            background-color: rgba(220, 173, 50, .4);
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            z-index: -1;
+        }     */
+
+    .map-container .col-1 {
+        margin: -4em 1.5em 0 0;
+    }
+
+    .map-container .col-2 {
+        margin-top: -1em;
+    }
+
+    .location {
+        /* color: #933E00; */
+    }
+
+    .location.details {
+        /* color: #42210B; */
+    }
+
+    .order {
+        margin-top: .5em;
+        padding: .5em 1em .65em 1em;
+        border-radius: 5px;
+    }
+
+    button.order{
+        background-color: #933E00;
+        color: #F8E2B7;
+        border: none;
+    }
+}
+
+@media (min-width: 1080px){
+   
+    .map h2 {
+        margin-top: 5em;
+    }
+}
 /* ----------- FOOTER --------- */
 
 .footer {
-    background-color: #933E00;
+    background-color: #331600;
     text-align: center;
-    margin-top: 5em;
+    padding-top: 2em;
 }
 
 .footer * {
