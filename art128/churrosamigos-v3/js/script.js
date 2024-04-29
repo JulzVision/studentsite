@@ -1,14 +1,10 @@
-const logo = document.querySelector(".logo-img")
-window.onscroll = function() {scrollFunction()};
+const parallax = document.getElementById("reef");
 
-function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    logo.style.width = "10em";
-    logo.style.margin = "6em";
-    logo.style.height = "auto";
-  } else {
-    logo.style.width = "50em";
-    logo.style.margin = "0";
+window.addEventListener("scroll", function(){
 
-  }
-}
+  // Does scrollY do the same as pageYOffset? the console.log does not log in Chrome Inspect
+  let offset = window.scrollY;
+  console.log ('Offset: ' + offset);
+  parallax.style.backgroundPositionY = offset * 0.7 + 'px';
+  
+})

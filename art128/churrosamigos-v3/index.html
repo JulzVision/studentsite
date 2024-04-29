@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Churros Amigos v2</title>
+    <title>Churros Amigos v3</title>
     <meta name="description" content="SiteBase: html + css + js">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -18,16 +18,12 @@
 
 <body>
     <div class="wrapper">
-
-        <!-- <div class="logo">
-            <img class="logo-img" src="img/ChurrosAmigosLogo.svg" alt="logo" width="100px" height="auto">
-        </div> -->
-
         
             <div class="hero">
                 
                 <img src="img/clouds.svg" alt="clouds" class="background">
-                <img src="img/mountain.svg" alt="clouds" class="foreground">
+                <img src="img/mountain.svg" alt="mountains" class="foreground" id="desk">
+                <img src="img/mountain-m.svg" alt="mountains" class="foreground" id="mobile">
                 <div class="greetings">
                     <h1>Churro 'Aina</h1>
                     <p>¡Aloha Hola! Welcome to a paradise of flavor where friends from all over the world gather to enjoy the sweet taste&nbsp;of&nbsp;churros.</p>
@@ -40,7 +36,8 @@
             </div>
 
             <div class="palmdivider">
-                <img class="palmdivider" src="img/SVG/palmdivider.svg" alt="divider of palm tree" width="100%" height="auto">
+                <img class="palmdivider" id="desk" src="img/SVG/palmdivider.svg" alt="divider of palm tree" width="100%" height="auto">
+                <img class="palmdivider" id="mobile" src="img/palmdivider-m.svg" alt="divider of palm tree" width="100%" height="auto">
             </div>
         
             <!-- ABOUT -->
@@ -174,87 +171,102 @@
          <!-- MENU -->
 
             <div class="menu">
-                
-                    <h2>
-                        Always Fresh
-                    </h2>
-                    <h3>
-                        Our churros are handmade — from&nbsp;a&nbsp;friend,&nbsp;for&nbsp;a&nbsp;friend.
-                    </h3>
-                
-                <div class="menu-container">
 
-                    <div class="menu-module classico">
-                        <div class="menuitem classico">
-                            <h4 class="item"><strong>
-                                Da Kine 
-                            </strong></h4>
-                            <div class="info">
-                                <p>
-                                    Crispy dough dusted with cinnamon and sugar for an irresistible sweet&nbsp;crunch.
-                                </p>
-                                <div class="calprice">
-                                    <p>700 cal</p>
-                                    <p>$10</p>
+                <div class="menu-content">
+                        <h2>
+                            Always Fresh
+                        </h2>
+                        <h3>
+                            Our churros are handmade — from&nbsp;a&nbsp;friend,&nbsp;for&nbsp;a&nbsp;friend.
+                        </h3>
+                    
+                        <div class="menu-container">
+
+                            <div class="menu-module classico">
+                                <div class="menuitem classico">
+                                    <h4 class="item"><strong>
+                                        Da Kine 
+                                    </strong></h4>
+                                    <div class="info">
+                                        <p>
+                                            Crispy dough dusted with cinnamon and sugar for an irresistible sweet&nbsp;crunch.
+                                        </p>
+                                        <div class="calprice">
+                                            <p>700 cal</p>
+                                            <p>$10</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-img classico">
+                                    <img src="img/classico-nobg 1.png" alt="churros in a basket" width="200px" height="auto">
                                 </div>
                             </div>
-                        </div>
-                        <div class="item-img classico">
-                            <img src="img/classico-nobg 1.png" alt="churros in a basket" width="200px" height="auto">
-                        </div>
-                    </div>
 
-                    <div class="menu-module choco">
-                        <div class="menuitem choco">
-                            <h4 class="item"><strong>
-                                Loco Choco
-                            </strong></h4>
-                            <div class="info">
-                                <p>
-                                    Golden churros paired with rich chocolate dipping sauce offer a delightful blend of flavors and textures for a satisfying&nbsp;treat.
-                                </p>
-                                <div class="calprice">
-                                    <p>900 cal</p>
-                                    <p>$13</p>
+                            <div class="menu-module choco">
+                                <div class="menuitem choco">
+                                    <h4 class="item"><strong>
+                                        Loco Choco
+                                    </strong></h4>
+                                    <div class="info">
+                                        <p>
+                                            Golden churros paired with rich chocolate dipping sauce offer a delightful blend of flavors and textures for a satisfying&nbsp;treat.
+                                        </p>
+                                        <div class="calprice">
+                                            <p>900 cal</p>
+                                            <p>$13</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-img choco">
+                                    <img src="img/choco.png" alt="churros with chocolate sauce" width="380px" height="auto">
                                 </div>
                             </div>
-                        </div>
-                        <div class="item-img choco">
-                            <img src="img/choco.png" alt="churros with chocolate sauce" width="380px" height="auto">
-                        </div>
-                    </div>
 
-                    <div class="arrow">
-                        <p class="arrow">location</p>
-                        <img src="img/SVG/arrow2.svg" alt="arrow">
-                    </div>
+                            <div class="arrow">
+                                <p class="arrow">location</p>
+                                <img src="img/SVG/arrow2.svg" alt="arrow">
+                            </div>
 
+                        </div>
+                </div>  
+
+                <div class="reef">
+                    <!-- <img src="img/menu-front-m.svg" alt="" id="mobile"> -->
                 </div>
+
             </div>
 
             <!-- MAP -->
                 <div class="map">
-                    <h2>
-                    On the 'aina
-                    </h2>
-                    <div class="map-container">
-                        <div class="col-1">
-                            <img src="img/map.png" alt="map of honolulu" width="275px">
-                        </div>
-                        <div class="col-2">
-                            <div class="address">
-                                <h4 class="location">Waikiki</h4>
-                                <p class="location details">321 Kuhio Ave.</p>
-                                <p class="location details">Honolulu, HI 96826</p>
+
+                    <div class="map-content">
+                        <h2>
+                        On the 'aina
+                        </h2>
+                        <div class="map-container">
+                            <div class="col-1">
+                                <img src="img/map.png" alt="map of honolulu" width="275px">
                             </div>
-                            <div class="hours">
-                                <h5 class="location"><strong>Hours</strong></h5>
-                                <p class="location details">Mon - Sat: 7am to 3pm</p>
-                                <p class="location details">Sun: closed</p>
+                            <div class="col-2">
+                                <div class="address">
+                                    <h4 class="location">Waikiki</h4>
+                                    <p class="location details">321 Kuhio Ave.</p>
+                                    <p class="location details">Honolulu, HI 96826</p>
+                                </div>
+                                <div class="hours">
+                                    <h5 class="location"><strong>Hours</strong></h5>
+                                    <p class="location details">Mon - Sat: 7am to 3pm</p>
+                                    <p class="location details">Sun: closed</p>
+                                </div>
+                                <button class="order">Order Now</button>
                             </div>
-                            <button class="order">Order Now</button>
                         </div>
                     </div>
+
+                    <div id="reef">
+
+                    </div>
+
                 </div>
 
             <!-- FOOTER -->

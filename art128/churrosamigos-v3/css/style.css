@@ -142,10 +142,22 @@ body {
     perspective: 10px;
 }
 
+.desk {
+    display: none;
+}
 
+@media (min-width: 768px) {
+    #desk {
+        display: block;
+    }
+
+    #mobile {
+        display: none;
+    }
+}
 
 /* ----------- LOGO ------------*/
-.logo {
+/* .logo {
     padding-top: 3em;
     text-align: center;
     justify-items: center;
@@ -158,7 +170,7 @@ body {
     width: 50em;
     transition: 0.4s;
     
-}
+} */
 
 /* -------------HERO -------------*/
 .hero {
@@ -223,11 +235,6 @@ p.arrow {
     padding-bottom: .5em;
 }
 
-/* -------------- ABOUT ------------*/
-.about * {
-    /* border: solid red .5px; */
-}
-
 .palmdivider {
     margin: 0;
     padding: 0;
@@ -239,6 +246,14 @@ img.palmdivider {
     margin: 0;
     padding: 0;
 }
+
+
+
+/* -------------- ABOUT ------------*/
+.about * {
+    /* border: solid red .5px; */
+}
+
 
 .about {
     position: relative;
@@ -467,6 +482,9 @@ img.palmdivider {
 }
 
 .menu {
+    /* Testing */
+    border: dashed green 1px;
+    
     background-color: #331600;
     color: white;
     margin-top: -1.25em;
@@ -477,6 +495,14 @@ img.palmdivider {
     z-index: 2;
 
 }
+
+.menu-content {
+    /* background-color: rgba(212, 228, 124, 0.528); */
+
+    /* Testing */
+    border: dashed white 1px;
+}
+
 .menu h2,
 .menu h3 {
     color: #F8E2B7;
@@ -501,12 +527,25 @@ img.palmdivider {
     text-align: left;
 }
 
+.calprice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* .reef {
+    background-image: url(../img/menu-front-m.svg); 
+    position: absolute;
+    height: 100vh;   
+    z-index: 2;
+} */
+
 /* --SMALL SCREENS -- */
 
 @media (max-width: 767px) {
 
     .menu {
-        background-image: url(../img/SVG/oceanfloor-m.svg);
+        /* background-image: url(../img/SVG/oceanfloor-m.svg); */
         background-size: 100%;
         background-repeat: no-repeat;
         /* background-position: center bottom; */
@@ -526,13 +565,6 @@ img.palmdivider {
     }
 
 }
-
-.calprice {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 
 
 /* -- TABLET -- */
