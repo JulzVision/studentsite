@@ -484,7 +484,7 @@ img.palmdivider {
 .menu {
     /* Testing */
     border: dashed green 1px;
-    
+
     background-color: #331600;
     color: white;
     margin-top: -1.25em;
@@ -492,7 +492,6 @@ img.palmdivider {
     display: flex;
     flex-direction: column;
     position: relative;
-    z-index: 2;
 
 }
 
@@ -501,6 +500,7 @@ img.palmdivider {
 
     /* Testing */
     border: dashed white 1px;
+    z-index: 4;
 }
 
 .menu h2,
@@ -533,12 +533,107 @@ img.palmdivider {
     justify-content: space-between;
 }
 
-/* .reef {
-    background-image: url(../img/menu-front-m.svg); 
-    position: absolute;
-    height: 100vh;   
-    z-index: 2;
-} */
+/* Need help stacking the reef layers in this section */
+/* background position to center top on svgs */
+
+    /* PARALLAX FIRST PASS */
+
+        /* .parallax-wrapper{
+            background-color: rgba(255, 255, 255, 0.42); 
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 100%;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .parallax-item {
+            grid-column: 1 / 1;
+            grid-row: 1 / 1;
+        }
+
+        .reef .parallax-item {
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .reef .back.parallax-item {
+            transform-origin: center top;
+            background-image: url(../img/menu-back-m.svg);
+            background-position: center top;
+            
+        } */
+
+        .parallax-wrapper {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 100%;
+            /* border: 2px solid red; */
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+          
+        .parallax-layer {
+            /* border: 2px solid yellow; */
+            grid-column: 1 / 1;
+            grid-row: 1 / 1;
+            transform-origin: center center;
+        }
+        
+        .sky-mountains {
+            /* min-height: 100vh; */
+        }
+        
+        .sky-mountains .parallax-wrapper {
+            overflow: visible;
+        }
+        
+        .sky-mountains .parallax-layer {
+            transform-origin: center center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        
+        .sky-mountains .parallax-layer1 { 
+            background-position: center center;
+            background-image: url(../img/clouds.svg); 
+        }
+        .sky-mountains .parallax-layer2 { 
+            background-image: url(../img/mountains.svg); 
+            background-position: center bottom;
+        }
+        
+        .oceanfloor .parallax-layer {
+            transform-origin: center center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .oceanfloor .parallax-layer1 { 
+            transform-origin: center top;
+            background-image: url(../img/menu-back-m.svg);
+            background-position: center top; 
+        }
+        .oceanfloor .parallax-layer2 { 
+            transform-origin: center top;
+            background-image: url(../img/menu-mid-m.svg); 
+            background-position: center top;
+        }
+        .oceanfloor .parallax-layer3 { 
+            transform-origin: center top;
+            background-image: url(../img/menu-front-m.svg); 
+            background-position: center top;
+        }
+    
 
 /* --SMALL SCREENS -- */
 
@@ -563,6 +658,8 @@ img.palmdivider {
     .menu-module {
         margin-bottom: 5em;
     }
+
+    
 
 }
 
@@ -737,19 +834,6 @@ button {
         position: relative;
     }
 
-    /* Old style */
-        /* .map-container::after {
-            background-color: rgba(220, 173, 50, .4);
-            content: "";
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            width: 100%;
-            height: 100%;
-            border-radius: 20px;
-            z-index: -1;
-        }     */
-
     .map-container .col-1 {
         margin: -4em 1.5em 0 0;
     }
@@ -776,6 +860,10 @@ button {
         background-color: #933E00;
         color: #F8E2B7;
         border: none;
+    }
+
+    .back {
+        background-image: url(../img/menu-back-m.svg);
     }
 }
 
